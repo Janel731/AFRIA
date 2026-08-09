@@ -1,13 +1,14 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import AfriaLogo from "../assets/AFRIALogo.svg?react";
+import Logo from "../assets/AFRIALogo2.svg?react";
 import "./Preloader.css";
 const Preloader = ({ navLogoRef, onFinish }) => {
   const logoRef = useRef();
   const progressRef = useRef(null);
   const percentRef = useRef(null);
   const preload = useRef();
+
   useGSAP(() => {
     gsap.fromTo(
       logoRef.current,
@@ -134,9 +135,9 @@ const Preloader = ({ navLogoRef, onFinish }) => {
 
   return (
     <div ref={preload} className="preloader font-poppins-bold">
-      <h1 ref={logoRef} className="logo">
-        <span className="shine">AFRIA</span>
-      </h1>
+      <div ref={logoRef} className="logo">
+        <Logo className="w-[300px] h-auto" />
+      </div>
 
       <div className="progress">
         <div ref={progressRef} className="progress-fill"></div>

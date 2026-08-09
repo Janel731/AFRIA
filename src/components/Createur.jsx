@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-import LeroyPhoto from "../assets/leroy.webp";
+import LeroyPhoto from "../assets/Leroy.webp";
 
 const Createur = () => {
 

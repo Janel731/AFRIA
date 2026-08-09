@@ -107,7 +107,7 @@ const Footer = () => {
               </a>
 
               <a
-              target="_1blank"
+              target="_blank"
                 href={whatsappLink}
                 className="
                   text-[16px]

@@ -12,12 +12,7 @@
 }
 
 .logo {
-  margin: 0;
-  font-size: 6rem;
-  color: #931e16;
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
+  width: fit-content;
 }
 
 .logo::after {
