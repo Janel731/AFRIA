@@ -1,0 +1,29 @@
+# AFRIA
+
+> AFRIA est un jeu de cartes inspiré de la culture béninoise.
+
+## À propos
+
+AFRIA transforme le jeu de cartes traditionnel en une expérience
+culturelle béninoise.
+
+## Symboles
+
+Les quatre enseignes traditionnelles sont remplacées par des
+symboles inspirés du patrimoine béninois.
+
+## Jeux
+
+AFRIA permet notamment de jouer à :
+- Sipa
+- Pic
+- Gemise
+- Belotte
+
+## Précommande
+
+AFRIA est disponible en précommande.
+
+## Site
+
+https://afria-one.vercel.app/
