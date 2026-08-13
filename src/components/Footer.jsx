@@ -1,4 +1,4 @@
-import AfriaLogo from "../assets/AFRIALogo.svg?react";
+import AfriaLogoBlanc from "../assets/AFRIALogoBlanc.svg?react";
 
 const Footer = () => {
     const whatsappLink = `https://wa.me/22961985587`;
@@ -8,10 +8,11 @@ const Footer = () => {
         className="
           mx-auto
           max-w-[1440px]
-          px-6
-          py-16
+          px-4
+          py-12
 
-          sm:px-10
+          sm:px-8
+          sm:py-16
 
           lg:px-[120px]
           lg:py-16
@@ -20,7 +21,7 @@ const Footer = () => {
         <div
           className="
             grid
-            gap-12
+            gap-10
 
             md:grid-cols-2
 
@@ -34,15 +35,14 @@ const Footer = () => {
           ========================= */}
           <div>
             {/* Logo */}
-            <div className="w-[120px]
-                     sm:w-[170px]
-                     lg:w-[240px] bg-white ">
-               <AfriaLogo
-                              className="
-                              afria-logo
-                  
-                  "
-                            />
+            <div className="w-[140px] sm:w-[170px] lg:w-[200px] inline-block">
+              <AfriaLogoBlanc
+                className="
+                  afria-logo
+                  w-full
+                  h-auto
+                "
+              />
             </div>
 
             {/* Slogan */}
@@ -51,10 +51,12 @@ const Footer = () => {
                 mt-6
                 max-w-[320px]
 
-                text-[18px]
-                leading-[30px]
+                text-[16px]
+                sm:text-[18px]
+                leading-[26px]
+                sm:leading-[30px]
                 font-poppins-semibold
-                text-white/85
+                text-white/90
               "
             >
               Nos symboles racontent notre histoire.
@@ -63,12 +65,13 @@ const Footer = () => {
             {/* Copyright */}
             <p
               className="
-                mt-8
+                mt-6
+                sm:mt-8
 
                 text-[14px]
                 leading-[20px]
                 font-poppins-regular
-                text-white/60
+                text-white/70
               "
             >
               © 2026 AFRIA. Tous droits réservés.
@@ -103,7 +106,7 @@ const Footer = () => {
                   hover:text-white
                 "
               >
-                Précommande
+                Commande
               </a>
 
               <a

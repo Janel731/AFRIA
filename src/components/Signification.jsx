@@ -154,130 +154,159 @@ useLayoutEffect(() => {
 
   return (
     <section ref={sectionRef} id="Signification" className="bg-white">
-     
-        {/* Header */}
-        <div className=" text-center mx-auto
-      max-w-[1200px]
-      px-6
-      sm:px-10
-      lg:px-[120px]
-      lg:py-[120px]">
-          <p
-            className="
-              text-[20px]
-              font-poppins-semibold
-              uppercase
-              tracking-[0.12em]
-              text-[#931E16]
-            "
-          >
-            LES symboles AFRIA
-          </p>
+      {/* Header */}
+      <div
+        className="
+          text-center
+          mx-auto
+          max-w-[1200px]
+          px-4
+          py-12
+          sm:px-8
+          sm:py-16
+          lg:px-[120px]
+          lg:py-[120px]
+        "
+      >
+        <p
+          className="
+            text-[16px]
+            sm:text-[18px]
+            lg:text-[20px]
+            font-poppins-semibold
+            uppercase
+            tracking-[0.12em]
+            text-[#931E16]
+          "
+        >
+          Les symboles AFRIA
+        </p>
 
-          <h2
-            className="
-              mt-6
-              text-[36px]
-              font-poppins-bold
-              leading-tight
-              text-[#111111]
+        <h2
+          className="
+            mt-4
+            sm:mt-6
+            text-[28px]
+            leading-[36px]
+            font-poppins-bold
+            text-[#111111]
 
-              sm:text-[44px]
+            sm:text-[40px]
+            sm:leading-[48px]
 
-              lg:text-[56px]
-              lg:leading-[64px]
-            "
-          >
-            Chaque symbole porte une signification.
-          </h2>
-        </div>
+            lg:text-[56px]
+            lg:leading-[64px]
+          "
+        >
+          Chaque symbole porte une signification.
+        </h2>
+      </div>
 
-        {/* Blocs */}
-        <div className="bg-[#D9D9D9]/30 ">
-          <div className=" space-y-24 lg:space-y-[120px]  mx-auto
-        max-w-[1440px]
-        px-6
-        py-20
-        sm:px-10
-        lg:px-[120px] ">
-            {symbols.map((symbol, index) => (
-              <div
-                key={symbol.id}
-                className={`
-                    symbol-block
+      {/* Blocs */}
+      <div className="bg-[#D9D9D9]/30">
+        <div
+          className="
+            space-y-16
+            lg:space-y-[120px]
+            mx-auto
+            max-w-[1440px]
+            px-4
+            py-12
+            sm:px-8
+            sm:py-20
+            lg:px-[120px]
+          "
+        >
+          {symbols.map((symbol, index) => (
+            <div
+              key={symbol.id}
+              className={`
+                symbol-block
                 grid
                 items-center
-                gap-10
+                gap-8
                 lg:grid-cols-2
                 lg:gap-20
                 ${index % 2 !== 0 ? "lg:[&>*:first-child]:order-2" : ""}
               `}
-              >
-                {/* Image */}
-                <div
-                  className="
-
+            >
+              {/* Image */}
+              <div
+                className="
                   card-image
-    flex
-    h-[280px]
-    items-center
-    justify-center
+                  flex
+                  h-[240px]
+                  items-center
+                  justify-center
+                  w-full
+                  max-w-[340px]
+                  mx-auto
 
-    sm:h-[340px]
+                  sm:h-[320px]
+                  sm:max-w-[400px]
 
-    lg:h-[420px]
-  "
-                >
-                  <img
-                    src={symbol.image}
-                    alt={symbol.name}
-                    className="
-      h-full
-      w-auto
-      object-contain
-      drop-shadow-lg
-    "
-                  />
-                </div>
+                  lg:h-[420px]
+                  lg:max-w-none
+                "
+              >
+                <img
+                  src={symbol.image}
+                  alt={symbol.name}
+                  className="
+                    h-full
+                    w-auto
+                    object-contain
+                    drop-shadow-lg
+                  "
+                />
+              </div>
 
-                {/* Texte */}
-                <div className="max-w-[520px]">
-                  <h3
-                    className="
+              {/* Texte */}
+              <div className="max-w-[520px] mx-auto lg:mx-0 text-center lg:text-left">
+                <h3
+                  className="
                     symbol-title
-                    text-[28px]
+                    text-[22px]
                     font-poppins-bold
                     leading-tight
+
+                    sm:text-[28px]
 
                     lg:text-[36px]
                     lg:leading-[44px]
                   "
-                  >
-                    <span className="text-[#111111]">{symbol.name}</span>
+                >
+                  <span className="text-[#111111]">{symbol.name}</span>
 
-                    <span className="mx-2 text-[#111111]">—</span>
+                  <span className="mx-2 text-[#111111]">—</span>
 
-                    <span className="text-[#931E16]">{symbol.value}</span>
-                  </h3>
+                  <span className="text-[#931E16]">{symbol.value}</span>
+                </h3>
 
-                  <p
-                    className="
+                <p
+                  className="
                     symbol-description
-                    mt-6
-                    text-[24px]
-                    leading-[30px]
+                    mt-4
+                    sm:mt-6
+                    text-[15px]
+                    leading-[24px]
                     text-[#444444]
                     font-poppins-regular
+
+                    sm:text-[18px]
+                    sm:leading-[28px]
+
+                    lg:text-[22px]
+                    lg:leading-[32px]
                   "
-                  >
-                    {symbol.description}
-                  </p>
-                </div>
+                >
+                  {symbol.description}
+                </p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      
+      </div>
     </section>
   );
 };

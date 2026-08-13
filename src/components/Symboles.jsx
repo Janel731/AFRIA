@@ -112,10 +112,10 @@ const Symboles = () => {
         className="
           mx-auto
           max-w-[1440px]
-          min-h-[980px]
-          px-6
-          py-20
-          sm:px-10
+          px-4
+          py-12
+          sm:px-8
+          sm:py-20
           lg:px-[120px]
           lg:py-[120px]
         "
@@ -131,7 +131,9 @@ const Symboles = () => {
           <p
             className="
               text-center
-              text-[20px]
+              text-[16px]
+              sm:text-[18px]
+              lg:text-[20px]
               font-poppins-semibold
               uppercase
               tracking-[0.12em]
@@ -143,122 +145,126 @@ const Symboles = () => {
 
           {/* Composition */}
           <div
-          ref={gridRef}
+            ref={gridRef}
             className="
-    relative
-    mx-auto
+              relative
+              mx-auto
+              mt-8
+              mb-6
 
-    h-[280px] w-[280px]
+              h-[240px] w-[240px]
 
-    sm:h-[360px] sm:w-[360px]
+              sm:h-[340px] sm:w-[340px]
 
-    md:h-[440px] md:w-[440px]
+              md:h-[440px] md:w-[440px]
 
-    lg:h-[520px] lg:w-[520px]
-  "
+              lg:h-[520px] lg:w-[520px]
+            "
           >
             {/* Logo */}
             <div
               className="
-    absolute
-    left-1/2
-    top-1/2
-    -translate-x-1/2
-    -translate-y-1/2
-  "
+                absolute
+                left-1/2
+                top-1/2
+                -translate-x-1/2
+                -translate-y-1/2
+              "
             >
               <AfriaLogo
                 className="
-                afria-logo
-      h-[120px] w-[120px]
-      sm:h-[170px] sm:w-[170px]
-      lg:h-[240px] lg:w-[240px]
-    "
+                  afria-logo
+                  h-[90px] w-[90px]
+                  sm:h-[150px] sm:w-[150px]
+                  lg:h-[220px] lg:w-[220px]
+                "
               />
             </div>
 
             {/* Haut */}
             <img
               src={griffe}
+              alt="Griffe"
               className="
-              symbol-item
-    absolute
-    left-1/2
-    top-0
-    -translate-x-1/2
+                symbol-item
+                absolute
+                left-1/2
+                top-0
+                -translate-x-1/2
 
-    h-14 w-14
-    sm:h-20 sm:w-20
-    lg:h-[120px] lg:w-[120px]
-  "
+                h-10 w-10
+                sm:h-16 sm:w-16
+                lg:h-[110px] lg:w-[110px]
+              "
             />
 
             {/* Bas */}
             <img
               src={serpent}
+              alt="Serpent"
               className="
-              symbol-item
+                symbol-item
+                absolute
+                bottom-0
+                left-1/2
+                -translate-x-1/2
 
-absolute
-    bottom-0
-    left-1/2
-    -translate-x-1/2
-              
-
-    
-
-    h-14 w-14
-    sm:h-20 sm:w-20
-    lg:h-[120px] lg:w-[120px]
-  "
+                h-10 w-10
+                sm:h-16 sm:w-16
+                lg:h-[110px] lg:w-[110px]
+              "
             />
 
-            {/* Gauche */}
+            {/* Droite */}
             <img
               src={Corris}
+              alt="Cauris"
               className="
-              symbol-item
-    absolute
-    right-0
-    top-1/2
-    -translate-y-1/2
+                symbol-item
+                absolute
+                right-0
+                top-1/2
+                -translate-y-1/2
 
-    h-14 w-14
-    sm:h-20 sm:w-20
-    lg:h-[120px] lg:w-[120px]
-  "
+                h-10 w-10
+                sm:h-16 sm:w-16
+                lg:h-[110px] lg:w-[110px]
+              "
             />
 
             {/* Gauche */}
             <img
               src={Sagai}
+              alt="Sagaie"
               className="
-              symbol-item
-    absolute
-    left-0
-    top-1/2
-    -translate-y-1/2
+                symbol-item
+                absolute
+                left-0
+                top-1/2
+                -translate-y-1/2
 
-    h-14 w-14
-    sm:h-20 sm:w-20
-    lg:h-[120px] lg:w-[120px]
-  "
+                h-10 w-10
+                sm:h-16 sm:w-16
+                lg:h-[110px] lg:w-[110px]
+              "
             />
           </div>
 
           {/* Titre */}
           <h2
             className="
-            reveal
-              mt-16
+              reveal
+              mt-10
+              sm:mt-16
               max-w-[700px]
               text-center
-              text-[56px]
+              text-[28px]
+              leading-[36px]
               font-poppins-bold
-              leading-tight
               text-[#111111]
 
-              sm:text-[44px]
+              sm:text-[40px]
+              sm:leading-[48px]
 
               lg:text-[56px]
               lg:leading-[64px]
@@ -269,17 +275,22 @@ absolute
 
           {/* Sous-titre */}
           <p
-          ref={textRef}
+            ref={textRef}
             className="
-
-              mt-8
+              mt-6
+              sm:mt-8
               max-w-[620px]
               text-center
-              text-[18px]
-              leading-8
+              text-[15px]
+              leading-[24px]
               text-[#444444]
-                font-poppins-regular
-              lg:text-[24px]
+              font-poppins-regular
+
+              sm:text-[18px]
+              sm:leading-[28px]
+
+              lg:text-[22px]
+              lg:leading-[32px]
             "
           >
             Chaque symbole incarne une valeur essentielle du patrimoine

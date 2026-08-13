@@ -16,9 +16,9 @@ const App = () => {
 const [loading, setLoading] = useState(true);
   return (
      <>
-      <Navbar />
+      <Navbar navLogoRef={navLogoRef} />
       <Hero loading={loading} />
-      <Preloader onFinish={() => setLoading(false)} />
+      <Preloader navLogoRef={navLogoRef} onFinish={() => setLoading(false)} />
       <Mission />
       <Symboles />
       <Signification />

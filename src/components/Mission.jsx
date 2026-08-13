@@ -5,11 +5,12 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 gsap.registerPlugin(ScrollTrigger);
 
-import grif from "../assets/grif.webp";
+import afriaFace from "../assets/griffe.webp";
+import afriaBack from "../assets/DosCarte.webp";
 const Mission = () => {
   const textRef = useRef(null);
   const conclusionRef = useRef(null);
-
+  const cardRef = useRef(null);
   useEffect(() => {
     const split = new SplitType(".reveal-text", {
       types: "words",
@@ -47,15 +48,39 @@ const Mission = () => {
       },
     });
 
+    // Animation de la carte
+    const cardTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: cardRef.current,
+        start: "top 85%",
+        end: "bottom 30%",
+        scrub: true,
+        // markers: true 
+      },
+    });
+
+    cardTimeline
+      .to(cardRef.current, {
+        rotateY: 90,
+        y: -20,
+        ease: "none",
+      })
+      .to(cardRef.current, {
+        rotateY: 180,
+        y: 0,
+        ease: "none",
+      });
+
     return () => {
       para.revert();
+      cardTimeline.kill();
     };
 
-    
+
   }, []);
 
   useEffect(() => {
-      const ctx = gsap.context(() => {
+    const ctx = gsap.context(() => {
       gsap.from(conclusionRef.current, {
         opacity: 0,
         y: 30,
@@ -79,10 +104,10 @@ const Mission = () => {
         className="
           mx-auto
           max-w-[1440px]
-          min-h-[900px]
-          px-6
-          py-20
-          sm:px-10
+          px-4
+          py-12
+          sm:px-8
+          sm:py-20
           lg:px-[120px]
           lg:py-[120px]
         "
@@ -92,7 +117,7 @@ const Mission = () => {
             grid
             grid-cols-1
             items-center
-            gap-16
+            gap-10
             lg:grid-cols-[5fr_6fr]
             lg:gap-10
           "
@@ -102,8 +127,11 @@ const Mission = () => {
             {/* Label */}
             <p
               className="
-                mb-6
-                text-[20px]
+                mb-4
+                sm:mb-6
+                text-[16px]
+                sm:text-[18px]
+                lg:text-[20px]
                 font-poppins-semibold
                 uppercase
                 tracking-[0.12em]
@@ -116,15 +144,15 @@ const Mission = () => {
             {/* Titre */}
             <h2
               className="
-               reveal-text
+                reveal-text
                 max-w-[620px]
-                lg:w-[620px]
-                text-[36px]
+                text-[28px]
+                leading-[36px]
                 font-poppins-bold
-                leading-[1.15]
                 text-[#111111]
 
-                sm:text-[44px]
+                sm:text-[40px]
+                sm:leading-[48px]
 
                 lg:text-[56px]
                 lg:leading-[64px]
@@ -138,13 +166,18 @@ const Mission = () => {
             <p
               ref={textRef}
               className="
-                mt-10
+                mt-6
+                sm:mt-10
                 max-w-[560px]
-                text-[18px]
-                leading-8
+                text-[15px]
+                leading-[24px]
                 text-[#444444]
 
-                lg:text-[24px]
+                sm:text-[18px]
+                sm:leading-[28px]
+
+                lg:text-[22px]
+                lg:leading-[32px]
                 font-poppins-regular
               "
             >
@@ -159,8 +192,10 @@ const Mission = () => {
             <p
               ref={conclusionRef}
               className="
-                mt-10
-                text-[18px]
+                mt-6
+                sm:mt-10
+                text-[16px]
+                sm:text-[18px]
                 font-semibold
                 text-[#931E16]
               "
@@ -170,51 +205,69 @@ const Mission = () => {
           </div>
 
           {/* Illustration */}
-          <div
-            className="
-              flex
-              items-center
-              justify-center
-            "
-          >
-            <div
-              className="
-                flex
-                w-full
-                max-w-[520px]
-                items-center
-                justify-between
-                gap-6
-              "
-            >
-              {/* Carte AFRIA */}
-              <div
-                className="
-    flex
-    h-[320px]
-    w-full
-    items-center
-    justify-center
+          <div className="flex items-center justify-center">
+            <div className="flex w-full max-w-[520px] items-center justify-center">
 
-    sm:h-[400px]
+              {/* Conteneur de perspective */}
+              <div className="perspective-[1000px]">
 
-    lg:h-[500px]
-    lg:w-[500px]
-
-    border-[1px]
-    border-[#931E16]
-    rounded-[12px]
-  "
-              >
-                <img
-                  src={grif}
-                  alt="jeu de cartes AFRIA"
+                <div
+                  ref={cardRef}
                   className="
-      h-full
-      w-full
-      object-cover
+      relative
+      h-[300px]
+      w-[210px]
+      sm:h-[400px]
+      sm:w-[280px]
+      lg:h-[480px]
+      lg:w-[336px]
+      [transform-style:preserve-3d]
     "
-                />
+                >
+
+                  {/* FACE */}
+                  <div
+                    className="
+        absolute
+        inset-0
+        overflow-hidden
+        rounded-[16px]
+        border
+        border-[#931E16]
+        bg-white
+        [backface-visibility:hidden]
+      "
+                  >
+                    <img
+                      src={afriaFace}
+                      alt="Face de la carte AFRIA"
+                      className="h-full w-full object-contain"
+                    />
+                  </div>
+
+                  {/* DOS */}
+                  <div
+                    className="
+        absolute
+        inset-0
+        overflow-hidden
+        rounded-[16px]
+        border
+        border-[#931E16]
+        bg-white
+        [backface-visibility:hidden]
+        [transform:rotateY(180deg)]
+      "
+                  >
+                    <img
+                      src={afriaBack}
+                      alt="Dos de la carte AFRIA"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+
+                </div>
+
               </div>
             </div>
           </div>

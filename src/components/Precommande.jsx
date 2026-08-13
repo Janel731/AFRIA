@@ -34,31 +34,30 @@ const whatsappLink = `https://wa.me/22961985587?text=${whatsappMessage}`;
       <section id="precommande" className="bg-white" ref={sectionRef}>
         <div
           className="
-      mx-auto
-      max-w-[1440px]
-      px-6
-      py-20
+            mx-auto
+            max-w-[1440px]
+            px-4
+            py-12
 
-      sm:px-10
+            sm:px-8
+            sm:py-20
 
-      lg:px-[120px]
-      lg:py-[120px]
-     
-    "
+            lg:px-[120px]
+            lg:py-[120px]
+          "
         >
           <div
             ref={preorderBlockRef}
-            className="bg-[#931e16] p-10 rounded-[24px] "
+            className="bg-[#931e16] p-6 sm:p-10 rounded-[24px]"
           >
             <div
               className="
-        grid
-        items-center
-        gap-20
-
-        lg:grid-cols-[1fr_1fr]
-        
-      "
+                grid
+                items-center
+                gap-10
+                lg:grid-cols-[1fr_1fr]
+                lg:gap-16
+              "
             >
               {/* ============================
             Bloc Texte
@@ -69,14 +68,21 @@ const whatsappLink = `https://wa.me/22961985587?text=${whatsappMessage}`;
 
                 <h2
                   className="
-            mt-6
-            max-w-[620px]
+                    mt-2
+                    sm:mt-6
+                    max-w-[620px]
 
-            text-[56px]
-            leading-[64px]
-            font-poppins-bold
-            text-white/80
-          "
+                    text-[28px]
+                    leading-[36px]
+
+                    sm:text-[40px]
+                    sm:leading-[48px]
+
+                    lg:text-[56px]
+                    lg:leading-[64px]
+                    font-poppins-bold
+                    text-white
+                  "
                 >
                   Prêt à écrire la suite de l'histoire ?
                 </h2>
@@ -85,14 +91,21 @@ const whatsappLink = `https://wa.me/22961985587?text=${whatsappMessage}`;
 
                 <p
                   className="
-            mt-8
-            max-w-[560px]
+                    mt-4
+                    sm:mt-8
+                    max-w-[560px]
 
-            text-[24px]
-            leading-[32px]
-            text-white/80
-            font-poppins-regular
-          "
+                    text-[16px]
+                    leading-[24px]
+
+                    sm:text-[20px]
+                    sm:leading-[28px]
+
+                    lg:text-[24px]
+                    lg:leading-[32px]
+                    text-white/90
+                    font-poppins-regular
+                  "
                 >
                   AFRIA n'est pas seulement un jeu de cartes. C'est une manière
                   de jouer avec notre histoire, de transmettre notre culture et
@@ -107,28 +120,27 @@ const whatsappLink = `https://wa.me/22961985587?text=${whatsappMessage}`;
               <div className="flex justify-center lg:justify-end">
                 <div
                   className="
-    relative
-    flex
-    items-center
-    justify-center
-    py-8
-    lg:py-0
-    
-  "
+                    relative
+                    flex
+                    items-center
+                    justify-center
+                    py-4
+                    lg:py-0
+                  "
                 >
                   {/* Image du coffret */}
                   <img
                     src={coffret}
                     alt="Coffret AFRIA"
                     className="
-              h-auto
-              w-[75vw]
-              max-w-[620px]
-              sm:w-[60vw]
-              lg:w-[42vw]
-              xl:w-[620px]
-              object-contain
-            "
+                      h-auto
+                      w-full
+                      max-w-[340px]
+                      sm:max-w-[480px]
+                      lg:max-w-[620px]
+                      object-contain
+                      mx-auto
+                    "
                   />
                 </div>
               </div>
@@ -140,61 +152,79 @@ const whatsappLink = `https://wa.me/22961985587?text=${whatsappMessage}`;
 
             <div
               className="
-        mt-14
+                mt-10
+                sm:mt-14
 
-        flex
-        flex-col
-        items-center
-        gap-6
+                flex
+                flex-col
+                items-center
+                gap-4
+                sm:gap-6
 
-        sm:flex-row
-        sm:justify-center
-      "
+                sm:flex-row
+                sm:justify-center
+              "
             >
-              <button
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.amanga.store/products/afria/"
                 className="
-          h-[56px]
-          w-[260px]
+                  h-[56px]
+                  w-full
+                  sm:w-[260px]
 
-          rounded-xl
-          bg-white
+                  rounded-xl
+                  bg-white
 
-          text-[#931e16]
-          font-poppins-semibold
+                  text-[#931e16]
+                  font-poppins-semibold
+                  text-[18px]
 
-          transition-all
-          duration-300
+                  transition-all
+                  duration-300
 
-          hover:opacity-90
-        "
+                  hover:opacity-90
+                  flex
+                  items-center
+                  justify-center
+                "
               >
-                <a target="_blank" href="https://www.amanga.store/products/afria/">Précommander</a>
-              </button>
+                Commander
+              </a>
 
-              <button
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href={whatsappLink}
                 className="
-          h-[56px]
-          w-[260px]
+                  h-[56px]
+                  w-full
+                  sm:w-[260px]
 
-          rounded-xl
+                  rounded-xl
 
-          border
-          border-[#931E16]
+                  border
+                  border-white
 
-          bg-white
+                  bg-transparent
 
-          text-[#931E16]
-          font-poppins-semibold
+                  text-white
+                  font-poppins-semibold
+                  text-[18px]
 
-          transition-all
-          duration-300
+                  transition-all
+                  duration-300
 
-          hover:bg-[#931E16]
-          hover:text-white
-        "
+                  hover:bg-white
+                  hover:text-[#931e16]
+                  flex
+                  items-center
+                  justify-center
+                "
               >
-                <a target="_blank" href={whatsappLink}>Soutenir AFRIA</a>
-              </button>
+                Soutenir AFRIA
+              </a>
             </div>
 
             {/* ===================================
@@ -202,56 +232,40 @@ const whatsappLink = `https://wa.me/22961985587?text=${whatsappMessage}`;
     =================================== */}
             <div
               className="
-    mt-20
+                mt-12
+                sm:mt-20
 
-    flex
-    flex-col
-    items-center
-    gap-6
+                flex
+                flex-col
+                items-center
+                gap-4
+                sm:gap-8
 
-    md:flex-row
-    md:justify-center
-  "
+                md:flex-row
+                md:justify-center
+              "
             >
-              {/* Édition limitée */}
 
-              <div
-                className="
-      flex
-      items-center
-      gap-4
-    "
-              >
-                <Package size={22} strokeWidth={2} className="text-[#111111]" />
-
-                <span
-                  className="
-        text-[18px]
-        font-poppins-semibold
-        text-white/40
-      "
-                >
-                  Édition limitée
-                </span>
-              </div>
+              
 
               {/* Livraison */}
 
               <div
                 className="
-      flex
-      items-center
-      gap-4
-    "
+                  flex
+                  items-center
+                  gap-3
+                  sm:gap-4
+                "
               >
-                <Globe size={22} strokeWidth={2} className="text-[#111111]" />
 
                 <span
                   className="
-        text-[18px]
-        font-poppins-semibold
-        text-white/40
-      "
+                    text-[15px]
+                    sm:text-[18px]
+                    font-poppins-semibold
+                    text-white/90
+                  "
                 >
                   Livraison au Bénin et à l'international
                 </span>

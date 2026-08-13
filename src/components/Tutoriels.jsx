@@ -1,6 +1,8 @@
 import { useState } from "react";
 import TutorialModal from "./TutorialModal";
 import AfriaLogo from "../assets/AFRIALogo.svg?react";
+import AfriaLogoBlanc from "../assets/AFRIALogoBlanc.svg?react";
+
 import piqueImg from "../assets/peak.webp";
 import coeurImg from "../assets/coeur.webp";
 import carreauImg from "../assets/carreau.webp";
@@ -152,16 +154,15 @@ const games = [
   },
 ];
   return (
-    <section id="Rules" className="bg-[#DADADA]/30 ">
+    <section id="Rules" className="bg-[#DADADA]/30">
       <div
         className="
           mx-auto
           max-w-[1440px]
-          px-6
-          py-20
-
-          sm:px-10
-
+          px-4
+          py-12
+          sm:px-8
+          sm:py-20
           lg:px-[120px]
           lg:py-[120px]
         "
@@ -173,7 +174,9 @@ const games = [
         <div className="mx-auto max-w-[760px] text-center">
           <span
             className="
-              text-[20px]
+              text-[16px]
+              sm:text-[18px]
+              lg:text-[20px]
               uppercase
               tracking-[0.12em]
               text-[#931E16]
@@ -185,14 +188,16 @@ const games = [
 
           <h2
             className="
-              mt-6
+              mt-4
+              sm:mt-6
 
-              text-[2rem]
-              leading-tight
+              text-[28px]
+              leading-[36px]
               font-poppins-bold
               text-[#111111]
 
-              md:text-[2.75rem]
+              sm:text-[40px]
+              sm:leading-[48px]
 
               lg:text-[56px]
               lg:leading-[64px]
@@ -204,13 +209,20 @@ const games = [
           <p
             className="
               mx-auto
-              mt-8
+              mt-4
+              sm:mt-8
               max-w-[620px]
 
-              text-[24px]
-              leading-[30px]
+              text-[15px]
+              leading-[24px]
               text-[#444444]
               font-poppins-regular
+
+              sm:text-[18px]
+              sm:leading-[28px]
+
+              lg:text-[24px]
+              lg:leading-[32px]
             "
           >
             Les règles restent les mêmes. Découvrez comment jouer avec AFRIA
@@ -224,10 +236,12 @@ const games = [
 
         <div
           className="
-            mt-20
+            mt-12
+            sm:mt-20
 
             grid
-            gap-8
+            gap-6
+            sm:gap-8
 
             md:grid-cols-2
           "
@@ -244,13 +258,15 @@ const games = [
                 border-[#EAEAEA]
                 ${game.background}
 
-                p-8
+                p-6
+                sm:p-8
                 text-left
                 transition-all
                 duration-300
 
                 hover:-translate-y-2
                 hover:shadow-xl
+                cursor-pointer
               `}
             >
               {/* Eventail */}
@@ -261,37 +277,28 @@ const games = [
                   justify-center
                   items-end
 
-                  h-[220px]
+                  h-[180px]
+                  sm:h-[220px]
                 "
               >
-                {/* Placeholder éventail */}
+                {/* Centered logo illustration */}
 
-                <div className="relative h-[180px] w-[240px]">
-                  <div
-                    className={`
-    absolute 
-    left-20 
-    bottom-5 
-    h-[100px] 
-    w-[120px] 
-    rounded-xl 
-    flex 
-    items-center 
-    justify-center
-    ${game.background === "bg-white" ? "bg-white" : "bg-white"}
-  `}
-                  >
-                    <AfriaLogo />
-                  </div>
+                <div className="flex items-center justify-center h-[160px] sm:h-[180px]">
+                  {game.background === "bg-white" ? (
+                    <AfriaLogo className="w-[140px] sm:w-[180px] h-auto" />
+                  ) : (
+                    <AfriaLogoBlanc className="w-[140px] sm:w-[180px] h-auto" />
+                  )}
                 </div>
               </div>
 
               {/* Texte */}
 
-              <div className="mt-8">
+              <div className="mt-6 sm:mt-8">
                 <h3
                   className={`
-                    text-[32px]
+                    text-[24px]
+                    sm:text-[32px]
                     font-poppins-semibold
 
                     ${
@@ -306,8 +313,10 @@ const games = [
 
                 <p
                   className={`
-                    mt-3
-                    text-[18px]
+                    mt-2
+                    sm:mt-3
+                    text-[15px]
+                    sm:text-[18px]
                     font-poppins-regular
                     ${
                       game.background === "bg-white"

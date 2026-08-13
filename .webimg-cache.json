@@ -109,7 +109,7 @@
       "src\\assets\\Diamonds__suit__-_Wikipedia-removebg-preview.webp"
     ],
     "optionsHash": "eaaf192b95d62beb3f905e493df00764318f7063",
-    "mtime": 1786122701255
+    "mtime": 1786632025361
   },
   "src\\assets\\Hearts__️-removebg-preview.png": {
     "hash": "e1257a9b5a570cfa3bd669be917f9520d0800b60",
@@ -117,7 +117,7 @@
       "src\\assets\\Hearts__️-removebg-preview.webp"
     ],
     "optionsHash": "eaaf192b95d62beb3f905e493df00764318f7063",
-    "mtime": 1786122701257
+    "mtime": 1786632025424
   },
   "src\\assets\\459789443216990624-removebg-preview.png": {
     "hash": "cf55ee54d94e0554ea9ec03243ae9357e0b6c9a5",
@@ -125,7 +125,7 @@
       "src\\assets\\459789443216990624-removebg-preview.webp"
     ],
     "optionsHash": "eaaf192b95d62beb3f905e493df00764318f7063",
-    "mtime": 1786122701259
+    "mtime": 1786632025296
   },
   "src\\assets\\téléchargement__7_-removebg-preview.png": {
     "hash": "3affd791cc3181dfe0602f1a38c9102c5b41c9a8",
@@ -133,6 +133,54 @@
       "src\\assets\\téléchargement__7_-removebg-preview.webp"
     ],
     "optionsHash": "eaaf192b95d62beb3f905e493df00764318f7063",
-    "mtime": 1786122701262
+    "mtime": 1786632025429
+  },
+  "public\\favicon-16x16.png": {
+    "hash": "2c1e3aeca55476abe368c0ced88197e19d499dee",
+    "outputs": [
+      "public\\favicon-16x16.webp"
+    ],
+    "optionsHash": "eaaf192b95d62beb3f905e493df00764318f7063",
+    "mtime": 1786632025220
+  },
+  "public\\favicon.png": {
+    "hash": "bb5a352c1ee7b129b5330cc880604bec90183b04",
+    "outputs": [
+      "public\\favicon.webp"
+    ],
+    "optionsHash": "eaaf192b95d62beb3f905e493df00764318f7063",
+    "mtime": 1786632025245
+  },
+  "public\\apple-touch-icon.png": {
+    "hash": "fee91a4d467cd48a1c39d137cea4fda79a48cef3",
+    "outputs": [
+      "public\\apple-touch-icon.webp"
+    ],
+    "optionsHash": "eaaf192b95d62beb3f905e493df00764318f7063",
+    "mtime": 1786632025285
+  },
+  "public\\android-chrome-192x192.png": {
+    "hash": "406eaff71061475098a04d3119688f83a8858654",
+    "outputs": [
+      "public\\android-chrome-192x192.webp"
+    ],
+    "optionsHash": "eaaf192b95d62beb3f905e493df00764318f7063",
+    "mtime": 1786632025291
+  },
+  "public\\og-afria.png": {
+    "hash": "5c73687e75c77bd56cf6d0e3d90a2d74bc662c80",
+    "outputs": [
+      "public\\og-afria.webp"
+    ],
+    "optionsHash": "eaaf192b95d62beb3f905e493df00764318f7063",
+    "mtime": 1786632025347
+  },
+  "src\\assets\\DosCarte.jpeg": {
+    "hash": "92d53b8f1a5ceb2cd276e07300cabeca455271eb",
+    "outputs": [
+      "src\\assets\\DosCarte.webp"
+    ],
+    "optionsHash": "eaaf192b95d62beb3f905e493df00764318f7063",
+    "mtime": 1786632031599
   }
 }
