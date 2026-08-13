@@ -48,23 +48,37 @@ const Mission = () => {
       },
     });
 
+
+
     // Animation de la carte
+
+    gsap.set(cardRef.current, {
+      rotateY: 0,
+      y: 0,
+    });
+
     const cardTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: cardRef.current,
         start: "top 85%",
         end: "bottom 30%",
         scrub: true,
-        // markers: true 
       },
     });
 
     cardTimeline
-      .to(cardRef.current, {
-        rotateY: 90,
-        y: -20,
-        ease: "none",
-      })
+      .fromTo(
+        cardRef.current,
+        {
+          rotateY: 0,
+          y: 0,
+        },
+        {
+          rotateY: 90,
+          y: -20,
+          ease: "none",
+        }
+      )
       .to(cardRef.current, {
         rotateY: 180,
         y: 0,
