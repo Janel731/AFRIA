@@ -51,10 +51,9 @@ const Mission = () => {
 
 
     // Animation de la carte
-
     gsap.set(cardRef.current, {
-      rotateY: 0,
-      y: 0,
+      rotationY: 0,
+      force3D: true,
     });
 
     const cardTimeline = gsap.timeline({
@@ -67,26 +66,21 @@ const Mission = () => {
     });
 
     cardTimeline
-      .fromTo(
-        cardRef.current,
-        {
-          rotateY: 0,
-          y: 0,
-        },
-        {
-          rotateY: 90,
-          y: -20,
-          ease: "none",
-        }
-      )
       .to(cardRef.current, {
-        rotateY: 180,
+        rotationY: 90,
+        y: -20,
+        ease: "none",
+      })
+      .to(cardRef.current, {
+        rotationY: 180,
         y: 0,
         ease: "none",
       });
 
     return () => {
       para.revert();
+      split.revert();
+
       cardTimeline.kill();
     };
 
@@ -111,6 +105,10 @@ const Mission = () => {
 
     return () => ctx.revert();
   }, []);
+
+  requestAnimationFrame(() => {
+    ScrollTrigger.refresh();
+  });
 
   return (
     <section id="Mission" className="bg-white">
@@ -223,33 +221,43 @@ const Mission = () => {
             <div className="flex w-full max-w-[520px] items-center justify-center">
 
               {/* Conteneur de perspective */}
-              <div className="perspective-[1000px]">
-
+              <div
+                style={{
+                  perspective: "1000px",
+                }}
+              >
                 <div
                   ref={cardRef}
+                  style={{
+                    transformStyle: "preserve-3d",
+                    transformOrigin: "center center",
+                  }}
                   className="
-      relative
-      h-[300px]
-      w-[210px]
-      sm:h-[400px]
-      sm:w-[280px]
-      lg:h-[480px]
-      lg:w-[336px]
-      [transform-style:preserve-3d]
-    "
+    relative
+    h-[300px]
+    w-[210px]
+    sm:h-[400px]
+    sm:w-[280px]
+    lg:h-[480px]
+    lg:w-[336px]
+  "
                 >
 
                   {/* FACE */}
                   <div
+                    style={{
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                      transform: "translateZ(0.5px)",
+                    }}
                     className="
-        absolute
-        inset-0
-        overflow-hidden
-        rounded-[16px]
-        border
-        border-[#931E16]
+    absolute
+    inset-0
+    overflow-hidden
+    rounded-[16px]
+    border
+    border-[#931E16]
         bg-white
-        [backface-visibility:hidden]
       "
                   >
                     <img
@@ -261,17 +269,20 @@ const Mission = () => {
 
                   {/* DOS */}
                   <div
+                    style={{
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                      transform: "rotateY(180deg) translateZ(0.5px)",
+                    }}
                     className="
-        absolute
-        inset-0
-        overflow-hidden
-        rounded-[16px]
-        border
-        border-[#931E16]
-        bg-white
-        [backface-visibility:hidden]
-        [transform:rotateY(180deg)]
-      "
+    absolute
+    inset-0
+    overflow-hidden
+    rounded-[16px]
+    border
+    border-[#931E16]
+    bg-white
+  "
                   >
                     <img
                       src={afriaBack}
