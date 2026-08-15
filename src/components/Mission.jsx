@@ -5,8 +5,8 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 gsap.registerPlugin(ScrollTrigger);
 
-import afriaFace from "../assets/griffe.webp";
-import afriaBack from "../assets/DosCarte.webp";
+import afriaFace from "../assets/DosCarte.webp";
+import afriaBack from "../assets/griffe.webp";
 const Mission = () => {
   const textRef = useRef(null);
   const conclusionRef = useRef(null);
@@ -263,7 +263,7 @@ const Mission = () => {
                     <img
                       src={afriaFace}
                       alt="Face de la carte AFRIA"
-                      className="h-full w-full object-contain"
+                      className="h-full w-full object-cover"
                     />
                   </div>
 
