@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import Preloader from "./components/Preloader";
 import "./App.css";
 import Navbar from "./components/navbar";
@@ -26,6 +27,7 @@ const [loading, setLoading] = useState(true);
       <Tutoriels></Tutoriels>
       <Precommande />
       <Footer />
+      <Analytics />
     </>
   );
 };
